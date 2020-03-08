@@ -1,0 +1,1335 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>產品管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="main_content">
+        <div class="fill_form_block">
+            <div class="container">
+                <div class="top_content">
+                    <a href="index.html" class="btn_cancel_build">×</a>
+                </div>
+                <div class="form_content">
+                    <h4 class="form_title">住宿類型</h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item">
+                                    <div class="item_content">
+                                        <div class="radio_option_group">
+                                            <ul class="option_list">
+                                                <li>
+                                                    <input type="radio" id="AccommodationType1" name="AccommodationType" checked="">
+                                                    <label for="AccommodationType1">
+                                                        <p>商務飯店</p>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="AccommodationType2" name="AccommodationType">
+                                                    <label for="AccommodationType2">
+                                                        <p>溫泉旅館</p>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="AccommodationType3" name="AccommodationType">
+                                                    <label for="AccommodationType3">
+                                                        <p>民宿</p>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <h4 class="form_title">語系</h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item">
+                                    <div class="item_content">
+                                        <div class="checkbox_option_group">
+                                            <ul class="option_list">
+                                                <li>
+                                                    <input type="checkbox" id="LanguageType1" name="LanguageType" checked="">
+                                                    <label for="LanguageType1">
+                                                        <p>中文</p>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="LanguageType2" name="LanguageType" checked="">
+                                                    <label for="LanguageType2">
+                                                        <p>英文</p>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="LanguageType3" name="LanguageType" checked="">
+                                                    <label for="LanguageType3">
+                                                        <p>日文</p>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <h4 class="form_title">產品資料</h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                <div class="fill_item multiple_item">
+                                    <label class="item_title"><span>*</span>飯店名稱</label>
+                                    <div class="item_content">
+                                        <input type="text" class="form-control tooltip_style" placeholder="中文名稱" data-toggle="tooltip" data-placement="top" title="" data-original-title="中文名稱">
+                                    </div>
+                                    <div class="item_content">
+                                        <input type="text" class="form-control tooltip_style" placeholder="英文名稱" data-toggle="tooltip" data-placement="top" title="" data-original-title="英文名稱">
+                                    </div>
+                                    <div class="item_content">
+                                        <input type="text" class="form-control tooltip_style" placeholder="日文名稱" data-toggle="tooltip" data-placement="top" title="" data-original-title="日文名稱">
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item">
+                                    <label class="item_title">星級</label>
+                                    <!-- NOTE: 僅"商務飯店"才須顯示的條件 -->
+                                    <div class="item_content">
+                                        <div class="radio_option_group">
+                                            <ul class="option_list">
+                                                <li>
+                                                    <input type="radio" id="StarRating1" name="StarRating" checked="">
+                                                    <label for="StarRating1">
+                                                        <p>1星</p>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="StarRating2" name="StarRating">
+                                                    <label for="StarRating2">
+                                                        <p>2星</p>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="StarRating3" name="StarRating">
+                                                    <label for="StarRating3">
+                                                        <p>3星</p>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="StarRating4" name="StarRating">
+                                                    <label for="StarRating4">
+                                                        <p>4星</p>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="StarRating5" name="StarRating">
+                                                    <label for="StarRating5">
+                                                        <p>5星</p>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-7">
+                                <div class="fill_item multiple_item">
+                                    <label class="item_title"><span>*</span>地址</label>
+                                    <div class="item_content">
+                                        <div class="address_input">
+                                            <div class="country_input">
+                                                <!-- NOTE: 希望可以連動下方的英文地址 -->
+                                                <input type="text" class="form-control" placeholder="國家">
+                                                <div class="tooltip_box" style="display:none;">
+                                                    <ul>
+                                                        <li>
+                                                            <button class="btn btn-sm btn_style3">台灣</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="city_input">
+                                                <!-- NOTE: 希望可以連動下方的英文地址 -->
+                                                <input type="text" class="form-control" placeholder="城市">
+                                                <div class="tooltip_box" style="display:none;">
+                                                    <ul>
+                                                        <li>
+                                                            <button class="btn btn-sm btn_style3">台北市</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control tooltip_style" placeholder="地址(中文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="地址(中文)">
+                                        </div>
+                                    </div>
+                                    <div class="item_content">
+                                        <div class="address_input">
+                                            <input type="text" class="form-control tooltip_style" placeholder="地址(英文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="地址(英文)">
+                                        </div>
+                                    </div>
+                                    <div class="item_content">
+                                        <div class="address_input">
+                                            <input type="text" class="form-control tooltip_style" placeholder="地址(日文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="地址(日文)">
+                                        </div>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-2">
+                                <div class="fill_item">
+                                    <label class="item_title">入住時間</label>
+                                    <div class="item_content">
+                                        <div class="time_box">
+                                            <select class="form-control">
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                                <option value="">06</option>
+                                                <option value="">07</option>
+                                                <option value="">08</option>
+                                                <option value="">09</option>
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                                <option value="">12</option>
+                                                <option value="">13</option>
+                                                <option value="">14</option>
+                                                <option value="" selected="">15</option>
+                                                <option value="">16</option>
+                                                <option value="">17</option>
+                                                <option value="">18</option>
+                                                <option value="">19</option>
+                                                <option value="">20</option>
+                                                <option value="">21</option>
+                                                <option value="">22</option>
+                                                <option value="">23</option>
+                                                <option value="">24</option>
+                                            </select>
+                                            <span>：</span>
+                                            <select class="form-control">
+                                                <option value="" selected="">00</option>
+                                                <option value="">15</option>
+                                                <option value="">30</option>
+                                                <option value="">45</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2">
+                                <div class="fill_item">
+                                    <label class="item_title">退房時間</label>
+                                    <div class="item_content">
+                                        <div class="time_box">
+                                            <select class="form-control">
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                                <option value="">06</option>
+                                                <option value="">07</option>
+                                                <option value="">08</option>
+                                                <option value="">09</option>
+                                                <option value="">10</option>
+                                                <option value="" selected="">11</option>
+                                                <option value="">12</option>
+                                                <option value="">13</option>
+                                                <option value="">14</option>
+                                                <option value="">15</option>
+                                                <option value="">16</option>
+                                                <option value="">17</option>
+                                                <option value="">18</option>
+                                                <option value="">19</option>
+                                                <option value="">20</option>
+                                                <option value="">21</option>
+                                                <option value="">22</option>
+                                                <option value="">23</option>
+                                                <option value="">24</option>
+                                            </select>
+                                            <span>：</span>
+                                            <select class="form-control">
+                                                <option value="" selected="">00</option>
+                                                <option value="">15</option>
+                                                <option value="">30</option>
+                                                <option value="">45</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <div class="fill_item">
+                                    <label class="item_title"><span>*</span>Email</label>
+                                    <div class="item_content">
+                                        <input type="text" class="form-control tooltip_style" placeholder="example@mail.com" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <div class="fill_item">
+                                    <label class="item_title"><span>*</span>電話</label>
+                                    <div class="item_content">
+                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入電話號碼" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <div class="fill_item">
+                                    <label class="item_title accordion_title">傳真電話</label>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入電話號碼" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-4">
+                                <div class="fill_item">
+                                    <label class="item_title accordion_title">網站連結</label>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <input type="text" class="form-control tooltip_style" placeholder="www.example.com" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item multiple_item">
+                                    <label class="item_title accordion_title">飯店介紹</label>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(中文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(中文)"></textarea>
+                                    </div>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(英文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(英文)"></textarea>
+                                    </div>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(日文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(日文)"></textarea>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item multiple_item">
+                                    <label class="item_title accordion_title">重要訊息</label>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(中文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(中文)"></textarea>
+                                    </div>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(英文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(英文)"></textarea>
+                                    </div>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(日文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(日文)"></textarea>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item multiple_item">
+                                    <label class="item_title accordion_title">交通資訊</label>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(中文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(中文)"></textarea>
+                                    </div>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(英文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(英文)"></textarea>
+                                    </div>
+                                    <div class="item_content accordion_content" style="display: none;">
+                                        <textarea class="form-control tooltip_style" rows="8" placeholder="請輸入內容(日文)" data-toggle="tooltip" data-placement="top" title="" data-original-title="請輸入內容(日文)"></textarea>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-2">
+                                <div class="fill_item">
+                                    <label class="item_title">經度</label>
+                                    <div class="item_content">
+                                        <input type="text" class="form-control" placeholder="經度">
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2">
+                                <div class="fill_item">
+                                    <label class="item_title">緯度</label>
+                                    <div class="item_content">
+                                        <input type="text" class="form-control " placeholder="緯度">
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2">
+                                <div class="fill_item">
+                                    <label class="item_title">海拔</label>
+                                    <div class="item_content">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control tooltip_style" placeholder="">
+                                            <span class="input-group-addon">公尺</span>
+                                        </div>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-2">
+                                <div class="fill_item">
+                                    <label class="item_title">小孩年齡</label>
+                                    <div class="item_content">
+                                        <select class="form-control">
+                                            <option value="">1歲以下</option>
+                                            <option value="">2歲以下</option>
+                                            <option value="">3歲以下</option>
+                                            <option value="">4歲以下</option>
+                                            <option value="">5歲以下</option>
+                                            <option value="">6歲以下</option>
+                                            <option value="">7歲以下</option>
+                                            <option value="">8歲以下</option>
+                                            <option value="">9歲以下</option>
+                                            <option value="">10歲以下</option>
+                                            <option value="">11歲以下</option>
+                                            <option value="" selected="">12歲以下</option>
+                                            <option value="">13歲以下</option>
+                                            <option value="">14歲以下</option>
+                                            <option value="">15歲以下</option>
+                                            <option value="">16歲以下</option>
+                                            <option value="">17歲以下</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-2">
+                                <div class="fill_item">
+                                    <label class="item_title">產品等級</label>
+                                    <div class="item_content">
+                                        <div class="number_box">
+                                            <div class="num">3</div>
+                                            <button class="btn btn_style4 minus" min-num="1"><span class="glyphicon glyphicon-minus"></span></button>
+                                            <button class="btn btn_style1 plus"><span class="glyphicon glyphicon-plus"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-2">
+                                    <div class="fill_item">
+                                        <label class="item_title">售價計算</label>
+                                        <div class="item_content">
+                                            <select class="form-control">
+                                                <option value="" selected="">每人</option>
+                                                <option value="">每房</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <br>
+                        <br>
+                    </div>
+                    <h4 class="form_title">服務設施</h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item">
+                                    <div class="item_content">
+                                        <ul class="basic_facility">
+                                            <li style="display:none;">
+                                                <!-- 溫泉旅館專用 -->
+                                                <div class="checkbox">
+                                                    <input type="checkbox" class="check_item" id="HotelFacility1-7" name="HotelFacility1">
+                                                    <label for="HotelFacility1-7"><span></span>大浴場</label>
+                                                </div>
+                                                <div class="checkbox_option_group sub_content" style="display:none;">
+                                                    <ul class="option_list">
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem7-1" name="HotelFacilityItem7">
+                                                            <label for="HotelFacilityItem7-1">
+                                                                <p>室內浴池</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem7-2" name="HotelFacilityItem7">
+                                                            <label for="HotelFacilityItem7-2">
+                                                                <p>露天浴池</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem7-3" name="HotelFacilityItem7">
+                                                            <label for="HotelFacilityItem7-3">
+                                                                <p>展望浴池</p>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" class="check_item" id="HotelFacility1-1" name="HotelFacility1">
+                                                    <label for="HotelFacility1-1"><span></span>網路服務</label>
+                                                </div>
+                                                <div class="checkbox_option_group sub_content" style="display:none;">
+                                                    <ul class="option_list">
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem1-1" name="HotelFacilityItem1">
+                                                            <label for="HotelFacilityItem1-1">
+                                                                <p>所有房型皆附免費無限上網</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem1-2" name="HotelFacilityItem1">
+                                                            <label for="HotelFacilityItem1-2">
+                                                                <p>大廳提供免費無限上網</p>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" class="check_item" id="HotelFacility1-2" name="HotelFacility1">
+                                                    <label for="HotelFacility1-2"><span></span>餐飲服務</label>
+                                                </div>
+                                                <div class="checkbox_option_group sub_content" style="display:none;">
+                                                    <ul class="option_list">
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem2-1" name="HotelFacilityItem2">
+                                                            <label for="HotelFacilityItem2-1">
+                                                                <p>餐廳</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem2-2" name="HotelFacilityItem2">
+                                                            <label for="HotelFacilityItem2-2">
+                                                                <p>自動販賣機</p>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" class="check_item" id="HotelFacility1-3" name="HotelFacility1">
+                                                    <label for="HotelFacility1-3"><span></span>交通服務</label>
+                                                </div>
+                                                <div class="checkbox_option_group sub_content" style="display:none;">
+                                                    <ul class="option_list">
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem3-1" name="HotelFacilityItem3">
+                                                            <label for="HotelFacilityItem3-1">
+                                                                <p>接駁服務</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem3-2" name="HotelFacilityItem3">
+                                                            <label for="HotelFacilityItem3-2">
+                                                                <p>機場接送</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem3-3" name="HotelFacilityItem3">
+                                                            <label for="HotelFacilityItem3-3">
+                                                                <p>停車場(免費)</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem3-4" name="HotelFacilityItem3">
+                                                            <label for="HotelFacilityItem3-4">
+                                                                <p>代客叫車服務</p>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" class="check_item" id="HotelFacility1-4" name="HotelFacility1">
+                                                    <label for="HotelFacility1-4"><span></span>交通服務/設施</label>
+                                                </div>
+                                                <div class="checkbox_option_group sub_content" style="display:none;">
+                                                    <ul class="option_list">
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem4-1" name="HotelFacilityItem4">
+                                                            <label for="HotelFacilityItem4-1">
+                                                                <p>健身房</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem4-2" name="HotelFacilityItem4">
+                                                            <label for="HotelFacilityItem4-2">
+                                                                <p>室內泳池</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem4-3" name="HotelFacilityItem4">
+                                                            <label for="HotelFacilityItem4-3">
+                                                                <p>游泳池(室外)</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem4-4" name="HotelFacilityItem4">
+                                                            <label for="HotelFacilityItem4-4">
+                                                                <p>卡拉OK</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem4-5" name="HotelFacilityItem4">
+                                                            <label for="HotelFacilityItem4-5">
+                                                                <p>花園</p>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" class="check_item" id="HotelFacility1-5" name="HotelFacility1">
+                                                    <label for="HotelFacility1-5"><span></span>休閒娛樂設施</label>
+                                                </div>
+                                                <div class="checkbox_option_group sub_content" style="display:none;">
+                                                    <ul class="option_list">
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem5-1" name="HotelFacilityItem5">
+                                                            <label for="HotelFacilityItem5-1">
+                                                                <p>24小時前台服務</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem5-2" name="HotelFacilityItem5">
+                                                            <label for="HotelFacilityItem5-2">
+                                                                <p>無障礙友善設施</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem5-3" name="HotelFacilityItem5">
+                                                            <label for="HotelFacilityItem5-3">
+                                                                <p>電梯</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem5-4" name="HotelFacilityItem5">
+                                                            <label for="HotelFacilityItem5-4">
+                                                                <p>可帶寵物</p>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" class="check_item" id="HotelFacility1-6" name="HotelFacility1">
+                                                    <label for="HotelFacility1-6"><span></span>可使用語言</label>
+                                                </div>
+                                                <div class="checkbox_option_group sub_content" style="display:none;">
+                                                    <ul class="option_list">
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem6-1" name="HotelFacilityItem6">
+                                                            <label for="HotelFacilityItem6-1">
+                                                                <p>中文</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem6-2" name="HotelFacilityItem6">
+                                                            <label for="HotelFacilityItem6-2">
+                                                                <p>英語</p>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" id="HotelFacilityItem6-3" name="HotelFacilityItem6">
+                                                            <label for="HotelFacilityItem6-3">
+                                                                <p>日語</p>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <h4 class="form_title">加價服務</h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item">
+                                    <label class="item_title"><span>*</span>早餐加價費用</label>
+                                    <div class="item_content">
+                                        <ul class="room_price_list">
+                                            <li>
+                                                <div class="price_item price_currency">
+                                                    <div class="item_title">幣別</div>
+                                                    <div class="item_content">
+                                                        <select class="form-control">
+                                                            <option value="">TWD</option>
+                                                            <option value="">USD</option>
+                                                            <option value="">JPY</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">平日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="平日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">大假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="大假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季平日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季平日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季大假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季大假日">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item">
+                                    <label class="item_title"><span>*</span>晚餐加價費用</label>
+                                    <div class="item_content">
+                                        <ul class="room_price_list">
+                                            <li>
+                                                <div class="price_item price_currency">
+                                                    <div class="item_title">幣別</div>
+                                                    <div class="item_content">
+                                                        <select class="form-control">
+                                                            <option value="">TWD</option>
+                                                            <option value="">USD</option>
+                                                            <option value="">JPY</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">平日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="平日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">大假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="大假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季平日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季平日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季大假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季大假日">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item">
+                                    <label class="item_title"><span>*</span>加床費用</label>
+                                    <div class="item_content">
+                                        <ul class="room_price_list">
+                                            <li>
+                                                <div class="price_item price_currency">
+                                                    <div class="item_title">幣別</div>
+                                                    <div class="item_content">
+                                                        <select class="form-control">
+                                                            <option value="">TWD</option>
+                                                            <option value="">USD</option>
+                                                            <option value="">JPY</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">平日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="平日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">大假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="大假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季平日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季平日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季假日">
+                                                    </div>
+                                                </div>
+                                                <div class="price_item">
+                                                    <div class="item_title">旺季大假日</div>
+                                                    <div class="item_content">
+                                                        <input type="text" class="form-control tooltip_style" placeholder="請輸入售價" data-toggle="tooltip" data-placement="top" title="旺季大假日">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <h4 class="form_title">平日/假日定義<button type="button" class="btn btn-sm btn_style4 pull-right"><span class="glyphicon glyphicon-minus"></span> 減少月份</button><button type="button" class="btn btn-sm btn_style2 pull-right"><span class="glyphicon glyphicon-plus"></span> 增加月份</button></h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="calendar_setting">
+                                    <ul class="month_list">
+                                        <!-- NOTE: 預設顯示當月開始後的12個月份(至少) -->
+                                        <li class="active">
+                                            <!-- NOTE: 預設當月份被active -->
+                                            七月
+                                            <span>2017</span>
+                                        </li>
+                                        <li>
+                                            八月
+                                            <span>2017</span>
+                                        </li>
+                                        <li>
+                                            九月
+                                            <span>2017</span>
+                                        </li>
+                                        <li>
+                                            十月
+                                            <span>2017</span>
+                                        </li>
+                                        <li>
+                                            十一月
+                                            <span>2017</span>
+                                        </li>
+                                        <li>
+                                            十二月
+                                            <span>2017</span>
+                                        </li>
+                                        <li>
+                                            一月
+                                            <span>2018</span>
+                                        </li>
+                                        <li>
+                                            二月
+                                            <span>2018</span>
+                                        </li>
+                                        <li>
+                                            三月
+                                            <span>2018</span>
+                                        </li>
+                                        <li>
+                                            四月
+                                            <span>2018</span>
+                                        </li>
+                                        <li>
+                                            五月
+                                            <span>2018</span>
+                                        </li>
+                                        <li>
+                                            六月
+                                            <span>2018</span>
+                                        </li>
+                                    </ul>
+                                    <div class="setting_box">
+                                        <!-- NOTE: 預設顯示當月份 -->
+                                        <div class="calendar_box col-md-10">
+                                            <div class="month_block">
+                                                <div class="block_content">
+                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                            <tr class="content_header">
+                                                                <th>
+                                                                    <div class="week_title">週日</div>
+                                                                </th>
+                                                                <th>
+                                                                    <div class="week_title">週一</div>
+                                                                </th>
+                                                                <th>
+                                                                    <div class="week_title">週二</div>
+                                                                </th>
+                                                                <th>
+                                                                    <div class="week_title">週三</div>
+                                                                </th>
+                                                                <th>
+                                                                    <div class="week_title">週四</div>
+                                                                </th>
+                                                                <th>
+                                                                    <div class="week_title">週五</div>
+                                                                </th>
+                                                                <th>
+                                                                    <div class="week_title">週六</div>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="week">
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day big_holiday">
+                                                                        <div class="date">1</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="week">
+                                                                <td>
+                                                                    <div class="day weekday selected">
+                                                                        <div class="date">2</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">3</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">4</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">5</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">6</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day holiday">
+                                                                        <div class="date">7</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day big_holiday">
+                                                                        <div class="date">8</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="week">
+                                                                <td>
+                                                                    <div class="day weekday selected">
+                                                                        <div class="date">9</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">10</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">11</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">12</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">13</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day holiday">
+                                                                        <div class="date">14</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day big_holiday">
+                                                                        <div class="date">15</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="week">
+                                                                <td>
+                                                                    <div class="day hot_weekday selected">
+                                                                        <div class="date">16</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day hot_weekday">
+                                                                        <div class="date">17</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day hot_weekday">
+                                                                        <div class="date">18</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day hot_weekday">
+                                                                        <div class="date">19</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day hot_weekday">
+                                                                        <div class="date">20</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day hot_holiday">
+                                                                        <div class="date">21</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day hot_big_holiday">
+                                                                        <div class="date">22</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="week">
+                                                                <td>
+                                                                    <div class="day weekday selected">
+                                                                        <div class="date">23</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">24</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">25</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">26</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">27</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day holiday">
+                                                                        <div class="date">28</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day big_holiday">
+                                                                        <div class="date">29</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="week">
+                                                                <td>
+                                                                    <div class="day weekday selected">
+                                                                        <div class="date">30</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day weekday">
+                                                                        <div class="date">31</div>
+                                                                        <div class="day_type"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="day disabled">&nbsp;</div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="function_box col-md-2">
+                                            <!-- NOTE: 預設隱藏，日期被選擇時才顯示 -->
+                                            <div class="fill_item">
+                                                <label class="item_title">設定日期為</label>
+                                                <div class="item_content">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button" class="btn btn_style1">平日</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn_style1">假日</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn_style1">大假日</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn_style1">旺季平日</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn_style1">旺季假日</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn_style1">旺季大假日</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn_style2">取消選取</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <h4 class="form_title">取消條款定義<span class="sub_title">(編寫順序由上至下，由最近至最遠天數)</span><button class="btn btn-sm btn_style2 pull-right btn_add_item"><span class="glyphicon glyphicon-plus"></span> 增加區段</button></h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="fill_item">
+                                    <div class="item_content">
+                                        <ul class="cancel_terms_setting">
+                                            <li style="display:none;">
+                                                <!-- 新增的項目使用 -->
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="day">距離入住日
+                                                                <input type="text" class="form-control tooltip_style" data-toggle="tooltip" data-placement="top" title="" value="1" data-original-title="當天為0">天
+                                                            </td>
+                                                            <td>以內取消，罰金為售價的
+                                                                <input type="text" class="form-control tooltip_style" data-toggle="tooltip" data-placement="top" title="" value="100" data-original-title="免費為0，全額為100"> %
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <button class="btn btn_style3 pull-right"><span class="glyphicon glyphicon-remove"></span></button>
+                                            </li>
+                                            <li>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td rowspan="2" class="day">距離入住日
+                                                                <input type="text" class="form-control tooltip_style" data-toggle="tooltip" data-placement="top" title="" value="1" data-original-title="當天為0">天
+                                                            </td>
+                                                            <td>以內取消，罰金為售價的
+                                                                <input type="text" class="form-control tooltip_style" data-toggle="tooltip" data-placement="top" title="" value="100" data-original-title="免費為0，全額為100"> %
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>之前取消，罰金為售價的
+                                                                <input type="text" class="form-control tooltip_style" data-toggle="tooltip" data-placement="top" title="" value="0" data-original-title="免費為0，全額為100"> %
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!-- .main_content : END -->
+        <div class="form_bottom_block">
+            <div class="container">
+                <div class="bottom_content">
+                    <a href="build_hotel_pic.html" class="btn btn-lg btn_style1">下一步：上傳飯店照片</a>
+                    <div class="fill_item horizontal">
+                        <div class="item_content">
+                            <div class="checkbox">
+                                <input type="checkbox" class="check_item" id="CheckInfo1" name="CheckInfo">
+                                <label for="CheckInfo1"><span></span>我已確認資料無誤</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fill_item horizontal pull-left">
+                        <label class="item_title">預設產品狀態</label>
+                        <div class="item_content">
+                            <select class="form-control input-lg status_setting">
+                                <option value="">下架</option>
+                                <option value="">上架</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

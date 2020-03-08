@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>通知管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid no_padding">
+                <div class="navbar-collapse collapse">
+                    <div class="title_block">
+                        <button type="button" class="btn btn_style3 btn_menu" data-toggle="dropdown" aria-expanded="false" style="display:none;">
+                            <div class="icon_menu">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                        </button>
+                        <div class="page_title">產品管理</div>
+                    </div>
+                    <div class="col-sm-8 col-md-3 top_search number_search">
+                        <div class="btn-group">
+                            <button class="btn btn_style3 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">飯店 <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">飯店</a></li>
+                                <li><a href="#">機票</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" placeholder="搜尋產品編號">
+                        <button class="btn btn_style3"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+
+                    <button class="btn btn_style1 btn_switch_search switch_name_search"><span class="glyphicon glyphicon-search"></span> 名稱搜尋</button>
+                    
+                    <button class="btn btn_style1 btn_switch_search switch_number_search" style="display:none;"><span class="glyphicon glyphicon-search"></span> 編號搜尋</button>
+
+                    <div class="col-sm-8 col-md-3 top_search name_search" style="display:none;">
+                        <div class="btn-group">
+                            <button class="btn btn_style3 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">飯店 <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">飯店</a></li>
+                                <li><a href="#">機票</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" placeholder="搜尋產品名稱">
+                        <button class="btn btn_style3"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                    <div class="member_function pull-right">
+                        <a href="#" class="btn btn_style2 btn_logout">登出</a>
+                        <div class="member_name hidden-xs">帳號10101，您好</div>
+                    </div>
+                    <div class="create_product pull-right" style="display:none;">
+                        <div class="btn-group">
+                            <button class="btn btn_style3 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">飯店 <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">飯店</a></li>
+                                <li><a href="#">機票</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn_style1" data-toggle="modal" data-target="#CreateHotel">建立產品</button>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="menu">
+            <div class="mask"></div>
+            <div class="menu_block">
+                <div class="block_top">
+                    <button type="button" class="btn btn_style3 btn_close" data-toggle="dropdown" aria-expanded="false">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <div class="block_content">
+                    <ul class="menu_list">
+                        <li class="active">福泰旅遊</li>
+                        <li>GTA</li>
+                        <li>HM</li>
+                        <li>BICO</li>
+                        <li>HANA</li>
+                        <li>Sabre</li>
+                        <li>產品供應商</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main_content">
+        <div class="container-fluid">
+            <div class="result_content">
+                <div class="list_table">
+                    <div class="table_head">
+                        <table>
+                            <tr>
+                                <th>產品編號</th>
+                                <th>產品名稱</th>
+                                <th>產品類型
+                                    <select class="form-control input-sm type_filter">
+                                        <option value="">全部</option>
+                                        <option value="">飯店</option>
+                                        <option value="">機票</option>
+                                    </select>
+                                </th>
+                                <th>產品狀態</th>
+                                <th>操作</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table_body">
+                        <p class="no_result" style="display: none;">未查詢到符合的資料</p>
+                        <table>
+                            <tr>
+                                <th>產品編號</th>
+                                <th>產品名稱</th>
+                                <th>住宿類型</th>
+                                <th>產品狀態</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td>123450</td>
+                                <td>Backpackers Inn, Taipei</td>
+                                <td>飯店</td>
+                                <td>
+                                    <div class="switch_option">
+                                        <ul class="option_list">
+                                            <li>
+                                                <input type="radio" id="TurnOff1_1" name="Switchgear1_1" value="">
+                                                <label for="TurnOff1_1">
+                                                    <p>已下架</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="TurnOn1_1" name="Switchgear1_1" value="" checked="">
+                                                <label for="TurnOn1_1">
+                                                    <p>上架中</p>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><a href="product_detail_hotel.html" class="btn btn_style1" target="_blank">產品內容</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table_bottom">
+                        <nav>
+                            <ul class="pagination">
+                                <li class="disabled"><a href="#"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- .list_table : END -->
+            </div>
+            <!-- .result_content : END -->
+        </div>
+        <!-- container-fluid : END -->
+        <div class="modal alert_modal fade in" id="ResultNotice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <p>未有符合的產品編號</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn_style1" data-dismiss="modal">確認</button>
+                    </div>
+                </div>
+                <!-- .modal-content : END -->
+            </div>
+        </div>
+        <!-- #ResultNotice : END -->
+        <div class="modal alert_modal fade in" id="OffShelfConfirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <p>確認要將產品下架?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn_style2" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn_style1" data-dismiss="modal">確認</button>
+                    </div>
+                </div>
+                <!-- .modal-content : END -->
+            </div>
+        </div>
+        <!-- #OffShelfConfirm : END -->
+        <div class="modal alert_modal fade in" id="DeleteComfirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <p>確認要刪除?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn_style2" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn_style5" data-dismiss="modal">刪除</button>
+                    </div>
+                </div>
+                <!-- .modal-content : END -->
+            </div>
+        </div>
+        <!-- #DeleteComfirm : END -->
+    </div>
+    <!-- .main_content : END -->
+</body>
+
+</html>
